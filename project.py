@@ -4,6 +4,7 @@ faceCascade=cv2.CascadeClassifier("haarcascade_frontalface_default.xml")
 
 app = Flask(__name__)
 
+# Face Detect With OpenCV
 def draw_boundary(img,classifier,scaleFactor,minNeighbors,color,text):
         gray=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
         features=classifier.detectMultiScale(gray,scaleFactor,minNeighbors,minSize=(55, 55))
@@ -22,7 +23,6 @@ def detect(img,faceCascade):
         
 camera = cv2.VideoCapture(0)
 
-                
 def gen_frames():
     while True:
         success, frame = camera.read()
@@ -36,6 +36,7 @@ def gen_frames():
                    b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
 
 
+# Web Streaming With Flask
 @app.route('/video_feed')
 def video_feed():
     return Response(gen_frames(), mimetype='multipart/x-mixed-replace; boundary=frame')
@@ -48,4 +49,4 @@ def index():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
