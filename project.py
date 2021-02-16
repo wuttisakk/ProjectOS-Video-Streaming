@@ -20,7 +20,7 @@ def detect(img,faceCascade):
         return img
 
         
-camera = cv2.VideoCapture(1)
+camera = cv2.VideoCapture(0)
 
                 
 def gen_frames():
