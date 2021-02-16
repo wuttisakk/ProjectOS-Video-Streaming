@@ -1,7 +1,7 @@
 # ProjectOS-Video-Streaming
 โดย OpenCV , Flask และ Nginx
 
-### Virtualbox ใช้กล้องได้
+### Virtualbox ให้ใช้กล้องได้
 [Click to download addition](http://download.virtualbox.org/virtualbox/6.1.0_RC1/Oracle_VM_VirtualBox_Extension_Pack-6.1.0_RC1.vbox-extpack)
 
 1. เปิด “Oracle VirtualBox Manager” กดที่ “File” -> “Preferences” <br>
