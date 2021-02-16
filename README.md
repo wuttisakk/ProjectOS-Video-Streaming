@@ -45,6 +45,8 @@ git clone https://github.com/wuttisakk/ProjectOS-Video-Streaming.git
 cd ProjectOS-Video-Streaming
 python3 project.py (รันโปรแกรม)
 ```
+พิมพ์ 127.0.0.1:5000 ในบราวน์เซอร์ ดูว่าภาพขึ้นรึป่าว
+
 #### กรณี Error
 น่าจะเกิดจากการที่หากล้องไม่เจอ แก้ไฟล์ project.py <br>
 หาบรรทัด camera = cv2.VideoCapture(0)
@@ -72,11 +74,11 @@ server {
     }
 }
 ```
-เสร็จแล้ว enable NGINX server block ที่เราสร้างด้านบน ด้วยคำสั่ง
+เสร็จแล้ว enable NGINX server block ที่เราสร้างด้านบน
 ```
 sudo ln -s /etc/nginx/sites-available/project /etc/nginx/sites-enabled
 ```
-ลองทดสอบ syntax ของ file ว่ามี error หรือไม่ ด้วยคำสั่ง
+ลองทดสอบ syntax ของ file ว่ามี error ไหม
 ```
 sudo nginx -t
 ```
