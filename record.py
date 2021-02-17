@@ -22,7 +22,7 @@ def detect(img,faceCascade):
 
 filename = time.strftime("%Y%m%d-%H%M%S")
 
-cap = cv2.VideoCapture(2)
+cap = cv2.VideoCapture(0)
 
 fourcc=cv2.VideoWriter_fourcc(*'MPEG')
 out=cv2.VideoWriter(filename+'.avi',fourcc,20.0,(640,480))
