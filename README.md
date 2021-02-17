@@ -33,7 +33,16 @@ sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 1
 ```
 sudo pip install opencv-python
 ```
-
+#### Record Video
+ติดตั้ง numpy
+```
+sudo pip install numpy
+```
+ติดตั้ง VLC Media Player ใหม่
+```
+sudo apt-get remove vlc --purge
+sudo apt-get install vlc
+```
 ### Flask
 ```
 sudo pip install flask
