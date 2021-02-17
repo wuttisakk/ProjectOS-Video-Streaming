@@ -43,6 +43,11 @@ sudo pip install numpy
 sudo apt-get remove vlc --purge
 sudo apt-get install vlc
 ```
+#### PySimpleGUI
+ติดตั้ง PySimpleGUI
+```
+sudo pip install --upgrade PySimpleGUI
+```
 ### Flask
 ```
 sudo pip install flask
