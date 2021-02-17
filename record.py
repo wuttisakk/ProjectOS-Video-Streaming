@@ -19,7 +19,7 @@ def detect(img,faceCascade):
         return img
 
         
-cap = cv2.VideoCapture(2)
+cap = cv2.VideoCapture()
 
 fourcc=cv2.VideoWriter_fourcc(*'MPEG')
 out=cv2.VideoWriter('Subscribe.avi',fourcc,20.0,(640,480))
