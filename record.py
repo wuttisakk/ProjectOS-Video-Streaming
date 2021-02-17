@@ -1,6 +1,8 @@
 import numpy as np
+import time
 import cv2
-faceCascade=cv2.CascadeClassifier("haarcascade_frontalface_default.xml")
+
+faceCascade = cv2.CascadeClassifier("haarcascade_frontalface_default.xml")
 
 def draw_boundary(img,classifier,scaleFactor,minNeighbors,color,text):
         gray=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
@@ -18,11 +20,12 @@ def detect(img,faceCascade):
         img,coords=draw_boundary(img,faceCascade,1.1,10,(0,255,0),"Face")
         return img
 
-        
-cap = cv2.VideoCapture()
+filename = time.strftime("%Y%m%d-%H%M%S")
+
+cap = cv2.VideoCapture(2)
 
 fourcc=cv2.VideoWriter_fourcc(*'MPEG')
-out=cv2.VideoWriter('Subscribe.avi',fourcc,20.0,(640,480))
+out=cv2.VideoWriter(filename+'.avi',fourcc,20.0,(640,480))
 
 while (cap.isOpened()):
         ret,frame = cap.read()
